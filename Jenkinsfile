@@ -3,12 +3,16 @@ pipeline {
 
     tools {
         maven 'Maven3'
-        jdk 'JDK21'
+        jdk 'JDK17'
     }
 
     stages {
 
-        
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/AishwaryaGirish12/maven1.git'
+            }
+        }
 
         stage('Build') {
             steps {
@@ -29,4 +33,3 @@ pipeline {
         }
     }
 }
-

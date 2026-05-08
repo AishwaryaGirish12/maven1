@@ -8,11 +8,7 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/AishwaryaGirish12/maven1.git'
-            }
-        }
+        
 
         stage('Build') {
             steps {
